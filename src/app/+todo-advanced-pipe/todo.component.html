@@ -1,0 +1,20 @@
+<div class="content">
+    <h1>Todo example</h1>
+    <h2>Advanced - Pipe</h2>
+
+    <div class="card-row">
+        <todo-add (add)="onAdd($event)"></todo-add>
+    </div>
+
+    <div class="card-row">
+        <md-card>
+            <md-input-container>
+                <input mdInput name="filter" placeholder="Filter Todo's..." [(ngModel)]="filter">
+            </md-input-container>
+            <button md-button (click)="filter = '';">Reset Filter</button>
+        </md-card>
+    </div>
+
+    <todo-list [items]="todos | myTodoFilter:filter" (reset)="onReset()">
+    </todo-list>
+</div>

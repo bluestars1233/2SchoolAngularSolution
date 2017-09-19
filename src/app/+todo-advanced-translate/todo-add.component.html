@@ -1,0 +1,9 @@
+<md-card class="add-item">
+    <md-card-header>
+        <md-card-title>{{ 'ADD_ITEM' | translate }}</md-card-title>
+    </md-card-header>
+    <md-input-container>
+        <input mdInput placeholder="{{ 'TODO_DESCRIPTION' | translate }}" #description>
+    </md-input-container>
+    <button md-button (click)="onAdd(description.value)">{{ 'ADD' | translate }}</button>
+</md-card>

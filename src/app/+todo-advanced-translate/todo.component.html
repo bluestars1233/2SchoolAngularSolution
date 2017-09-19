@@ -1,0 +1,15 @@
+<div class="content">
+    <h1 translate>TODO_EXAMPLE</h1>
+    <h2 translate>TRANSLATE</h2>
+
+    <h3>{{ 'HELLO' | translate:param }}</h3>
+
+    <lang-switch></lang-switch>
+
+    <div class="card-row">        
+        <todo-add (add)="onAdd($event)"></todo-add>
+    </div>
+
+    <todo-list [items]="todos" (reset)="onReset()">
+    </todo-list>
+</div>

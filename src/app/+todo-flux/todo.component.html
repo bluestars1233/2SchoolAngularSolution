@@ -1,0 +1,11 @@
+<div class="content">
+    <h1>Todo example</h1>
+    <h2>Flux architecture</h2>
+
+    <div class="card-row">
+        <todo-add (add)="onAdd($event)"></todo-add>
+    </div>
+
+    <todo-list [items]="store.todos" (reset)="onReset()">
+    </todo-list>
+</div>

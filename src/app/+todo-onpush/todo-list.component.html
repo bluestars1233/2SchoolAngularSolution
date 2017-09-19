@@ -1,0 +1,26 @@
+<div class="flex">
+    <md-card>
+        <md-card-header>
+            <md-card-title>📝 Todo</md-card-title>
+        </md-card-header>
+        <md-card-content>
+            <md-list>
+                <todo-item [item]="done" (checked)="onChecked($event, done)" *ngFor="let done of itemsOpen"></todo-item>
+            </md-list>
+        </md-card-content>
+    </md-card>
+
+    <md-card>
+        <md-card-header>
+            <md-card-title>✅ Done</md-card-title>
+        </md-card-header>
+        <md-card-content>
+            <md-list>
+                <todo-item [item]="done" (checked)="onChecked($event, done)" *ngFor="let done of itemsDone"></todo-item>
+            </md-list>
+        </md-card-content>
+        <md-card-actions>
+            <button md-button (click)="reset.emit()">Reset</button>
+        </md-card-actions>
+    </md-card>
+</div>

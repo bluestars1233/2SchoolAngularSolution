@@ -1,0 +1,6 @@
+<md-list-item>
+    <div>
+        <md-checkbox [ngModel]="item.checked" (ngModelChange)="onChecked($event)">{{item.description}}</md-checkbox>    
+        <span class="modified-date"> {{item.lastModified | date}} </span>
+    </div>
+</md-list-item>

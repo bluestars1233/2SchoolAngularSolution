@@ -1,0 +1,25 @@
+import { MdSnackBar } from '@angular/material';
+import { TodoItem } from '../common';
+import { Component, ElementRef, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+@Component({
+    selector: 'todo-add',
+    templateUrl: './todo-add.component.html'
+})
+export class TodoAddComponent {
+    @Output()
+    public add: EventEmitter<TodoItem> = new EventEmitter<TodoItem>();
+
+    @ViewChild('description') private descriptionInput: ElementRef;
+
+    constructor(public snackBar: MdSnackBar) {
+
+    }
+
+    public onAdd(newItemDescription: string) {
+        this.add.emit({ description: newItemDescription, checked: false, lastModified: new Date(), id: 0 });
+        this.descriptionInput.nativeElement.value = '';
+        this.snackBar.open(`Item with description "${newItemDescription} added`, null, {duration: 1500});
+    }
+}

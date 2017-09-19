@@ -1,0 +1,19 @@
+<md-card class="add-item">
+    <form [formGroup]="todoForm" novalidate (ngSubmit)="onAdd(description.value)">
+        <md-card-header>
+            <md-card-title>Add a new Item</md-card-title>
+        </md-card-header>
+        <md-input-container>
+            <input mdInput placeholder="Todo Beschreibung" formControlName="description" #description>
+        </md-input-container>
+        <div *ngIf="descriptionControl.invalid && (descriptionControl.dirty || descriptionControl.touched)" class="alert alert-danger">
+            <div *ngIf="descriptionControl.errors.required">
+                Description is required.
+            </div>
+            <div *ngIf="descriptionControl.errors.minlength">
+                Description must be at least 3 characters long.
+            </div>
+        </div>
+        <button md-button type="submit" [disabled]="todoForm.pristine || todoForm.errors">Add</button>
+    </form>
+</md-card>
