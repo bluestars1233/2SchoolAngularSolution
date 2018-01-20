@@ -1,0 +1,10 @@
+<div class="content" fxLayout="column" fxLayoutGap="25px">
+    <h1>Todo example</h1>
+    <h2>Advanced Pipe</h2>
+
+    <todo-add (add)="onAdd($event)"></todo-add>
+
+    <todo-filter (filterChanged)="filter=$event"></todo-filter>
+
+    <todo-view [items]="todos | myTodoFilter:filter" (reset)="onReset()"></todo-view>
+</div>

@@ -1,0 +1,22 @@
+<div class="content">
+    <h1>Todo example</h1>
+    <h2>OnPush example</h2>
+
+    <h1>Mutable Add</h1>
+    <div class="card-row">
+        <todo-add (add)="onAdd($event)"></todo-add>
+    </div>
+
+    <h1>Immutable Add</h1>
+    <div class="card-row">
+        <todo-add (add)="onAddClone($event)"></todo-add>
+    </div>
+
+    <h1>ChangeDetectionStrategy.Default</h1>
+    <todo-view [items]="todos" (reset)="onReset()">
+    </todo-view>
+
+    <h1>ChangeDetectionStrategy.OnPush</h1>
+    <todo-immutable-view [items]="todos" (reset)="onReset()">
+    </todo-immutable-view>
+</div>

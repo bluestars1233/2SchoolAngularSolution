@@ -1,0 +1,11 @@
+<form novalidate (submit)="onAdd(description.value)">
+    <mat-card class="add-item">
+        <mat-card-header>
+            <mat-card-title>{{'ADD_ITEM' | translate}}</mat-card-title>
+        </mat-card-header>
+        <mat-form-field>
+            <input matInput placeholder="{{ 'TODO_DESCRIPTION' | translate }}" #description>
+        </mat-form-field>
+        <button type="submit" mat-button>{{'ADD' | translate}}</button>
+    </mat-card>
+</form>

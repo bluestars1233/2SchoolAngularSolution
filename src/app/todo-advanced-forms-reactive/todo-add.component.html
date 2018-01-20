@@ -1,0 +1,14 @@
+<mat-card class="add-item">
+    <form #addForm="ngForm" [formGroup]="todoForm" (ngSubmit)="onAdd(descriptionControl.value)">
+        <mat-card-header>
+            <mat-card-title>Add a new Item</mat-card-title>
+        </mat-card-header>
+        <mat-form-field>
+            <input matInput placeholder="Todo Beschreibung" formControlName="description">
+            <mat-error *ngIf="descriptionControl.invalid && (descriptionControl.dirty || descriptionControl.touched)" class="alert alert-danger">
+                {{errorMessage}}
+            </mat-error>
+        </mat-form-field>
+        <button mat-button type="submit" [disabled]="!todoForm.valid">Add</button>
+    </form>
+</mat-card>
