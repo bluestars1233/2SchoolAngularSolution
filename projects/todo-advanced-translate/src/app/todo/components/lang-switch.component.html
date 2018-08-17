@@ -1,0 +1,9 @@
+<div fxLayout="row" fxLayoutAlign="end center">
+    <mat-card fxFlex="20">
+        <mat-form-field>
+            <mat-select placeholder="{{ 'LANGUAGE' | translate }}" [ngModel]="myLang" (selectionChange)="onLangChanged($event)">
+                <mat-option *ngFor="let lang of languages" [value]="lang.code">{{ lang.name }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </mat-card>
+</div>

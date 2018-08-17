@@ -1,0 +1,11 @@
+<div class="content" fxLayout="column" fxLayoutGap="25px">
+    <h1 translate>TODO_EXAMPLE</h1>
+    <h2 translate>TRANSLATE</h2>
+
+    <h3>{{ 'HELLO' | translate:param }}</h3>
+
+    <todo-lang-switch></todo-lang-switch>
+
+    <todo-add (add)="onAdd($event)"></todo-add>
+    <todo-view [items]="todos" (reset)="onReset()"></todo-view>
+</div>

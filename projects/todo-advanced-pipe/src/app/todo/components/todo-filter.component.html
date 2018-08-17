@@ -1,0 +1,8 @@
+<div>
+    <mat-card>
+        <mat-form-field>
+            <input matInput name="filter" placeholder="Filter Todo's..." [ngModel]="filter" (ngModelChange)="valueChanged($event)">
+        </mat-form-field>
+        <button mat-button (click)="resetFilter()">Reset Filter</button>
+    </mat-card>
+</div>

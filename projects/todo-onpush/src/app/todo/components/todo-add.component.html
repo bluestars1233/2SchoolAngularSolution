@@ -1,0 +1,9 @@
+<mat-card class="add-item">
+    <mat-card-header>
+        <mat-card-title>Add a new Item</mat-card-title>
+    </mat-card-header>
+    <mat-form-field>
+        <input matInput placeholder="Todo Beschreibung" #description>
+    </mat-form-field>
+    <button mat-button (click)="onAdd(description.value)">Add</button>
+</mat-card>
