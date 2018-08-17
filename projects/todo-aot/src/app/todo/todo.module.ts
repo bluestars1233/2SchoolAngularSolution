@@ -13,20 +13,6 @@ import { TodoAotService } from './services/aot-error.service';
 import { TodoService } from './services/todo.service';
 import { todoRoutesModule } from './todo.routes';
 
-export function TodoServiceFactory(http: HttpClient): TodoService {
-    return new TodoService(http);
-}
-
-export let todoAotService: TodoAotService = new TodoAotService();
-
-// working aot code
-// providers: [{ provide: TodoAotService, useValue: todoAotService },
-//     {
-//         provide: TodoService,
-//         useFactory: TodoServiceFactory,
-//         deps: [HttpClient]
-//     }]
-
 @NgModule({
     imports: [CommonModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatInputModule, MatSnackBarModule,
         MatCardModule, MatListModule, MatCheckboxModule, FlexLayoutModule, HttpClientModule, todoRoutesModule],
