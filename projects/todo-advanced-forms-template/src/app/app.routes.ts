@@ -4,7 +4,7 @@ export const appRoutes: Routes = [
   { path: '', redirectTo: 'todo', pathMatch: 'full' },
   {
     path: 'todo',
-    loadChildren: './todo/todo.module#TodoAdvancedFormsTemplateModule',
+    loadChildren: () => import('./todo/todo.module').then(m => m.TodoAdvancedFormsTemplateModule),
     data: { title: 'Todo Template Forms' }
   }
 ];

@@ -1,6 +1,7 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
 import { TodoItem } from '../../shared';
+import { NgForm } from '@angular/forms';
 
 @Component({
     selector: 'todo-add',
@@ -13,15 +14,15 @@ export class TodoAddComponent {
     // required for AoT build
     public descriptionText: string;
 
-    @ViewChild('description') private descriptionInput: ElementRef;
+    @ViewChild('myForm', { static: true }) form: NgForm;
 
     constructor(public snackBar: MatSnackBar) {
 
     }
 
-    public onAdd(newItemDescription: string) {
-        this.add.emit({ description: newItemDescription, checked: false, lastModified: new Date(), id: 0 });
-        this.descriptionInput.nativeElement.value = '';
-        this.snackBar.open(`Item with description "${newItemDescription} added`, null, { duration: 1500 });
+    public onAdd() {
+        this.add.emit({ description: this.descriptionText, checked: false, lastModified: new Date(), id: 0 });
+        this.form.resetForm();
+        this.snackBar.open(`Item with description "${this.descriptionText} added`, null, { duration: 1500 });
     }
 }

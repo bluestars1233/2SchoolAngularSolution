@@ -12,14 +12,14 @@ export class TodoAddComponent implements OnInit {
     public add: EventEmitter<TodoItem> = new EventEmitter<TodoItem>();
     public todoForm: FormGroup;
 
-    @ViewChild('addForm', { read: FormGroupDirective }) private form: FormGroupDirective;
+    @ViewChild('addForm', { read: FormGroupDirective, static: true }) private form: FormGroupDirective;
 
-    constructor(public snackBar: MatSnackBar, private formBuilder: FormBuilder) {
+    constructor(public snackBar: MatSnackBar) {
 
     }
 
     public ngOnInit(): void {
-        this.todoForm = this.formBuilder.group({
+        this.todoForm = new FormGroup({
             description: new FormControl('', [Validators.required, Validators.minLength(3)])
         });
     }
@@ -35,20 +35,6 @@ export class TodoAddComponent implements OnInit {
     }
 
     public revert() {
-        // This would work and no template variable is required but some manual iterating over controls
-        // for (const controlName in this.todoForm.controls) {
-        //     if (this.todoForm[controlName]) {
-        //         this.todoForm[controlName].reset('');
-        //     }
-        // }
-
-        // In general this should work however there is still an issue with it on material design,
-        // therefore the input keeps to be displayed in red
-        // https://github.com/angular/material2/issues/8848
-        // this.todoForm.reset({
-        //     description: ''
-        // });
-
         this.form.resetForm();
     }
 

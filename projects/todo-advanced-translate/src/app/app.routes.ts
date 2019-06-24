@@ -4,7 +4,7 @@ export const appRoutes: Routes = [
   { path: '', redirectTo: 'todo', pathMatch: 'full' },
   {
     path: 'todo',
-    loadChildren: './todo/todo.module#TodoAdvancedTranslateModule',
+    loadChildren: () => import('./todo/todo.module').then(m => m.TodoAdvancedTranslateModule),
     data: { title: 'Translate' }
   }
 ];

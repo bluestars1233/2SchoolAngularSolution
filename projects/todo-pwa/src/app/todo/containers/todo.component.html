@@ -1,0 +1,6 @@
+<div class="content" fxLayout="column" fxLayoutGap="25px">
+    <h1 class="mat-h1">Todo PWA example (offline rdy v2)</h1>
+
+    <todo-add (add)="onAdd($event)"></todo-add>
+    <todo-view [items]="todos" (reset)="onReset()"></todo-view>
+</div>

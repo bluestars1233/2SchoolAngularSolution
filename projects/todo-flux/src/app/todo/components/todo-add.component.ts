@@ -8,7 +8,7 @@ export class TodoAddComponent {
     @Output()
     public add: EventEmitter<string> = new EventEmitter<string>();
 
-    @ViewChild('description') private descriptionInput: ElementRef;
+    @ViewChild('description', { static: true }) private descriptionInput: ElementRef;
 
     public onAdd(newItemDescription: string) {
         this.add.emit(newItemDescription);

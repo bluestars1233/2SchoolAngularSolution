@@ -4,7 +4,7 @@ export const appRoutes: Routes = [
   { path: '', redirectTo: 'todo', pathMatch: 'full' },
   {
     path: 'todo',
-    loadChildren: './todo/todo.module#TodoAdvancedGenericServiceModule',
+    loadChildren: () => import('./todo/todo.module').then(m => m.TodoAdvancedGenericServiceModule),
     data: { title: 'Todo Generic Service' }
   }
 ];

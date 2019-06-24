@@ -4,7 +4,7 @@ export const appRoutes: Routes = [
   { path: '', redirectTo: 'todo', pathMatch: 'full' },
   {
     path: 'todo',
-    loadChildren: './todo/todo.module#TodoAdvancedErrorhandlingModule',
+    loadChildren: () => import('./todo/todo.module').then(m => m.TodoAdvancedErrorhandlingModule),
     data: { title: 'Advanced Errorhandling' }
   }
 ];

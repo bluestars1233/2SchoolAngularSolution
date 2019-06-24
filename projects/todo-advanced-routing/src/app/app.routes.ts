@@ -10,7 +10,7 @@ export const appRoutes: Routes = [
   },
   {
     path: 'todo',
-    loadChildren: './todo/todo.module#TodoAdvancedRoutingModule',
+    loadChildren: () => import('./todo/todo.module').then(m => m.TodoAdvancedRoutingModule),
     data: { title: 'Advanced Routing' }
   }
 ];
