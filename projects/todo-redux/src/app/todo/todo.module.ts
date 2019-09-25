@@ -11,11 +11,7 @@ import { MatButtonModule, MatCardModule, MatCheckboxModule, MatInputModule, MatL
  * See: https://github.com/ngrx/effects/blob/master/docs/api.md#run
  */
 import { EffectsModule } from '@ngrx/effects';
-/**
- * @ngrx/router-store keeps router state up-to-date in the store and uses
- * the store as the single source of truth for the router's state.
- */
-import { StoreRouterConnectingModule } from '@ngrx/router-store';
+
 // ngrx imports
 /**
  * StoreModule.provideStore is imported once in the root module, accepting a reducer
@@ -39,7 +35,7 @@ import { todoRoutesModule } from './todo.routes';
 @NgModule({
     imports: [CommonModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatInputModule, MatSnackBarModule,
         MatCardModule, MatCheckboxModule, MatListModule, HttpClientModule, FlexLayoutModule, todoRoutesModule,
-        StoreModule.forFeature(featureName, reducers), EffectsModule.forRoot([TodoEffects]), StoreRouterConnectingModule],
+        StoreModule.forFeature(featureName, reducers), EffectsModule.forRoot([TodoEffects])],
     declarations: [TodoAddComponent, TodoComponent, TodoListComponent, TodoViewComponent, TodoItemComponent],
     providers: [TodoService, ActionToasterService]
 })
