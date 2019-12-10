@@ -6,6 +6,7 @@ import { TodoEffects } from './todo.effects';
 import { TodoActions } from '../actions';
 import { TodoService } from '../services/todo.service';
 import { TodoItem } from '../models/todo.types';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('TodoEffects', () => {
   let actions$: Observable<Action>;
@@ -14,6 +15,7 @@ describe('TodoEffects', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       providers: [TodoEffects, provideMockActions(() => actions$), TodoService]
     });
 
@@ -35,18 +37,22 @@ describe('TodoEffects', () => {
   });
 
   describe('modifiedCheck$', () => {
-    actions$ = of(TodoActions.check({id: 1, checked: true}));
+    it('should invoke modified action', () => {
+      actions$ = of(TodoActions.check({ id: 1, checked: true }));
 
-    effects.modifiedCheck$.subscribe((action: Action) => {
-      expect(action.type).toBe(TodoActions.addModified.type);
+      effects.modifiedCheck$.subscribe((action: Action) => {
+        expect(action.type).toBe(TodoActions.addModified.type);
+      });
     });
   });
 
   describe('modifiedAdd$', () => {
-    actions$ = of(TodoActions.add({toAdd: todoItem}));
+    it('should invoke modified action', () => {
+      actions$ = of(TodoActions.add({ toAdd: todoItem }));
 
-    effects.modifiedCheck$.subscribe((action: Action) => {
-      expect(action.type).toBe(TodoActions.addModified.type);
+      effects.modifiedAdd$.subscribe((action: Action) => {
+        expect(action.type).toBe(TodoActions.addModified.type);
+      });
     });
   });
 });

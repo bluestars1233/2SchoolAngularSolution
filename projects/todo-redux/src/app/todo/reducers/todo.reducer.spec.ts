@@ -9,8 +9,8 @@ describe('TodoReducer', () => {
       const action = {} as any;
 
       const result = todoReducer(undefined, action);
-      expect(result.todos).toBe([]);
-      expect(result.todosEdit).toBe([]);
+      expect(result.todos).toEqual([]);
+      expect(result.todosEdit).toEqual([]);
     });
   });
 
@@ -93,7 +93,7 @@ describe('TodoReducer', () => {
 
       expect(testState.todosEdit[0].lastModified).not.toBeDefined();
       expect(testState.todosEdit).toBe(todosEdit);
-      expect(result.todosEdit[0].modified).toBeDefined();
+      expect(result.todosEdit[0].lastModified).toBeDefined();
       expect(result.todosEdit[0]).not.toBe(todosEdit[0]);
     });
   });
@@ -112,7 +112,7 @@ describe('TodoReducer', () => {
       const resetAction = TodoActions.reset();
       const result = todoReducer(testState, resetAction);
 
-      expect(testState.todosEdit).toBe(todosEdit);
+      expect(testState.todosEdit).toEqual(todosEdit);
       expect(result.todosEdit.length).toBe(1);
       expect(result.todosEdit[0].id).toBe(origId);
       expect(result.todosEdit[0]).not.toBe(todos[0]);
@@ -121,7 +121,7 @@ describe('TodoReducer', () => {
 
   function createTodoItemBy(id: number, checked = false): TodoItem {
     return {
-      lastModified: null,
+      lastModified: undefined,
       checked,
       id: id,
       description: 'some'

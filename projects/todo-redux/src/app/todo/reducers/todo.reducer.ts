@@ -30,7 +30,7 @@ export const todoReducer = createReducer(
   })),
   on(TodoActions.reset, state => ({
     ...state,
-    todosEdit: [...state.todos]
+    todosEdit: cloneArray(state.todos)
   }))
 );
 
@@ -39,13 +39,19 @@ function handleCheck(
   id: number,
   checked: boolean
 ): TodoItem[] {
-  const toEdit = { ...state.todosEdit.find(item => item.id === id) };
+  const origItem = state.todosEdit.find(item => item.id === id);
+  const toEdit = { ...origItem };
   toEdit.checked = checked;
-  return [...state.todosEdit.filter(item => item.id !== id), toEdit];
+  const clone = [...state.todosEdit.filter(item => item.id !== id)];
+  clone.splice(state.todosEdit.indexOf(origItem), 0, toEdit);
+  return clone;
 }
 
 function handleModified(state: TodoState, id: number): TodoItem[] {
-  const toEdit = { ...state.todosEdit.find(item => item.id === id) };
+  const origItem = state.todosEdit.find(item => item.id === id);
+  const toEdit = { ...origItem };
   toEdit.lastModified = new Date();
-  return [...state.todosEdit.filter(item => item.id !== id), toEdit];
+  const clone = [...state.todosEdit.filter(item => item.id !== id)];
+  clone.splice(state.todosEdit.indexOf(origItem), 0, toEdit);
+  return clone;
 }
