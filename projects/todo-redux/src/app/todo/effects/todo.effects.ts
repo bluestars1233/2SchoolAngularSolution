@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Actions, Effect, ofType } from '@ngrx/effects';
+import { Actions, Effect, ofType, createEffect } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 import { switchMap, map, catchError } from 'rxjs/operators';
-import { AddTodoAction, CheckTodoAction, LoadCompletedTodoAction, ModifiedTodoAction, TodoActionTypes } from '../actions/actions.type';
 import { TodoService } from '../services/todo.service';
-import { TodoItem } from '../actions/actions.type';
+import { TodoActions } from '../actions';
+import { TodoItem } from '../models/todo.types';
 
 /**
  * Effects offer a way to isolate and easily test side-effects within your
@@ -26,22 +26,33 @@ import { TodoItem } from '../actions/actions.type';
 
 @Injectable()
 export class TodoEffects {
+  load$: Observable<Action | {}> = createEffect(() =>
+    this.actions$.pipe(
+      ofType(TodoActions.load),
+      switchMap(() => {
+        return this.todoService.load().pipe(
+          map((todos: TodoItem[]) =>
+            TodoActions.loadComplete({ items: todos })
+          ),
+          catchError(() => of(TodoActions.loadComplete({ items: [] })))
+        );
+      })
+    )
+  );
 
-    @Effect()
-    private load$: Observable<Action | {}> = this.actions$.pipe(
-        ofType(TodoActionTypes.LOAD),
-        switchMap(() => {
-            return this.todoService.load().pipe(
-                map((todos: TodoItem[]) => new LoadCompletedTodoAction(todos)),
-                catchError(() => of(new LoadCompletedTodoAction([])))
-            );
-        }));
+  modifiedCheck$: Observable<Action> = createEffect(() =>
+    this.actions$.pipe(
+      ofType(TodoActions.check),
+      map(({ id }) => TodoActions.addModified({ id }))
+    )
+  );
 
-    @Effect()
-    private modifiedCheck$: Observable<Action> = this.actions$.pipe(
-        ofType(TodoActionTypes.CHECK, TodoActionTypes.ADD),
-        map((checked: CheckTodoAction | AddTodoAction) =>
-            new ModifiedTodoAction(checked.payload.id)));
+  modifiedAdd$: Observable<Action> = createEffect(() =>
+    this.actions$.pipe(
+      ofType(TodoActions.add),
+      map(({ toAdd }) => TodoActions.addModified({ id: toAdd.id }))
+    )
+  );
 
-    constructor(private actions$: Actions, private todoService: TodoService) { }
+  constructor(private actions$: Actions, private todoService: TodoService) {}
 }

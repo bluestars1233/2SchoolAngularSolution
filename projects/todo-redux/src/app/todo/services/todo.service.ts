@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { TodoItem } from '../actions/actions.type';
+import { TodoItem } from '../models/todo.types';
 
 @Injectable()
 export class TodoService {

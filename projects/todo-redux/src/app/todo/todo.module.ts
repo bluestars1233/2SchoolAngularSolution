@@ -27,15 +27,16 @@ import { TodoListComponent } from './components/todo-list.component';
 import { TodoViewComponent } from './components/todo-view.component';
 import { TodoComponent } from './containers/todo.component';
 import { TodoEffects } from './effects/todo.effects';
-import { featureName, reducers } from './reducers/todo.reducer';
+import { todoReducer } from './reducers/todo.reducer';
 import { ActionToasterService } from './services/action-toaster.service';
 import { TodoService } from './services/todo.service';
 import { todoRoutesModule } from './todo.routes';
+import { todoFeatureKey } from './reducers/todo.selector';
 
 @NgModule({
     imports: [CommonModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatInputModule, MatSnackBarModule,
         MatCardModule, MatCheckboxModule, MatListModule, HttpClientModule, FlexLayoutModule, todoRoutesModule,
-        StoreModule.forFeature(featureName, reducers), EffectsModule.forRoot([TodoEffects])],
+        StoreModule.forFeature(todoFeatureKey, todoReducer), EffectsModule.forRoot([TodoEffects])],
     declarations: [TodoAddComponent, TodoComponent, TodoListComponent, TodoViewComponent, TodoItemComponent],
     providers: [TodoService, ActionToasterService]
 })
