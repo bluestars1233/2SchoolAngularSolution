@@ -2293,5 +2293,8 @@
       }
     }
   },
-  "defaultProject": "todo-single-component"
+  "defaultProject": "todo-single-component",
+  "cli": {
+    "analytics": false
+  }
 }

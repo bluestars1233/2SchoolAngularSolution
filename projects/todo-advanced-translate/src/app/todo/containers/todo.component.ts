@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { cloneArray, TodoItem } from '../../shared';
 import { TodoService } from '../services/todo.service';
 
