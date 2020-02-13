@@ -5,8 +5,11 @@
     "target": "es5",
     "types": []
   },
-  "exclude": [
-    "src/test.ts",
-    "**/*.spec.ts"
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "projects/todo-redux/src/**/*.d.ts"
   ]
 }
