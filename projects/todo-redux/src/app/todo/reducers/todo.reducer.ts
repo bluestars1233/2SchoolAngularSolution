@@ -1,15 +1,15 @@
 import { TodoItem } from './../models/todo.types';
-import { createReducer, on } from '@ngrx/store';
+import { createReducer, on, Action } from '@ngrx/store';
 import { TodoActions } from '../actions';
 import { TodoState } from './todo.state';
 import { cloneArray } from '../../shared';
 
-export const initialState: TodoState = {
+const initialState: TodoState = {
   todos: [],
   todosEdit: []
 };
 
-export const todoReducer = createReducer(
+const todoReducer = createReducer(
   initialState,
   on(TodoActions.loadComplete, (state, { items }) => ({
     ...state,
@@ -54,4 +54,8 @@ function handleModified(state: TodoState, id: number): TodoItem[] {
   const clone = [...state.todosEdit.filter(item => item.id !== id)];
   clone.splice(state.todosEdit.indexOf(origItem), 0, toEdit);
   return clone;
+}
+
+export function reducer(state: TodoState | undefined, action: Action) {
+  return todoReducer(state, action);
 }
