@@ -4,12 +4,12 @@ import { TodoActions } from '../actions';
 import { TodoState } from './todo.state';
 import { cloneArray } from '../../shared';
 
-const initialState: TodoState = {
+export const initialState: TodoState = {
   todos: [],
   todosEdit: []
 };
 
-const todoReducer = createReducer(
+const reducer = createReducer(
   initialState,
   on(TodoActions.loadComplete, (state, { items }) => ({
     ...state,
@@ -56,6 +56,6 @@ function handleModified(state: TodoState, id: number): TodoItem[] {
   return clone;
 }
 
-export function reducer(state: TodoState | undefined, action: Action) {
-  return todoReducer(state, action);
+export function todoReducer(state: TodoState | undefined, action: Action) {
+  return reducer(state, action);
 }
