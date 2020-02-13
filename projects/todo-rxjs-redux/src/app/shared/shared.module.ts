@@ -38,7 +38,7 @@ export const APP_WIDE_SINGLETON: Provider[] = [{ provide: Disposer, useFactory: 
     declarations: [StatePlaybackComponent]
 })
 export class SharedModule {
-    public static forRoot(): ModuleWithProviders {
+    public static forRoot(): ModuleWithProviders<SharedModule> {
         return { ngModule: SharedModule, providers: APP_WIDE_SINGLETON };
     }
 }
