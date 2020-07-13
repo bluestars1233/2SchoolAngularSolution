@@ -18,7 +18,7 @@ export abstract class ServiceBase<TItem> {
             this.items = this.cache.readCache();
             this.orig = this.cache.readCache();
 
-            return Observable.create((observer) => {
+            return new Observable((observer) => {
                 observer.next(this.cache.readCache());
                 console.log('cache read');
                 observer.complete();

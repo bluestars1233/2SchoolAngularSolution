@@ -19,13 +19,13 @@ describe('TodoEffects', () => {
       providers: [TodoEffects, provideMockActions(() => actions$), TodoService]
     });
 
-    effects = TestBed.get(TodoEffects);
+    effects = TestBed.inject(TodoEffects);
   });
 
   describe('load$', () => {
     it('should invoke backend call and execute loadComplete', () => {
       actions$ = of({ type: TodoActions.load.type });
-      const todoService: TodoService = TestBed.get(TodoService);
+      const todoService: TodoService = TestBed.inject(TodoService);
       spyOn(todoService, 'load').and.returnValue(of([todoItem]));
 
       effects.load$.subscribe((action: Action) => {
