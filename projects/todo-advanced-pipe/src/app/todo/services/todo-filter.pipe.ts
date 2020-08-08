@@ -12,8 +12,7 @@ export class TodoFilterPipe implements PipeTransform {
     }
 
     const filterStr = filterStrings.toLowerCase();
-    return items.filter((i) => i.description.toLowerCase().indexOf(filterStr) !== -1
-      || i.description.toLowerCase().indexOf(filterStr) !== -1);
+    return items.filter((i) => i.description.toLowerCase().indexOf(filterStr) !== -1);
   }
 
 }

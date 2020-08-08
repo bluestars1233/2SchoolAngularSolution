@@ -17,7 +17,7 @@ export class TodoComponent implements OnInit {
     }
 
     public ngOnInit() {
-        this.todoService.load();
+        // this.todoService.load();
     }
 
     public onAdd(newItem: TodoItem): void {
