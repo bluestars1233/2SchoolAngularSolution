@@ -18,13 +18,13 @@ import { getTodos } from '../reducers/todo.selector';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoComponent implements OnInit, OnDestroy {
-  public todos: Observable<TodoItem[]>;
+  public todos$: Observable<TodoItem[]>;
 
   constructor(
     private store$: Store<TodoState>,
     private actionToaster: ActionToasterService
   ) {
-    this.todos = this.store$.pipe(select(getTodos));
+    this.todos$ = this.store$.pipe(select(getTodos));
   }
 
   public ngOnInit() {

@@ -3,5 +3,5 @@
     <h2>Redux architecture</h2>
 
     <todo-add (add)="onAdd($event)"></todo-add>
-    <todo-view [items]="todos | async" (reset)="onReset()" (checked)="onChecked($event)"></todo-view>
+    <todo-view [items]="todos$ | async" (reset)="onReset()" (checked)="onChecked($event)"></todo-view>
 </div>
