@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-single-component",
             "index": "projects/todo-single-component/src/index.html",
             "main": "projects/todo-single-component/src/main.ts",
@@ -26,7 +25,13 @@
             "styles": [
               "projects/todo-single-component/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -132,7 +137,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-advanced-directive",
             "index": "projects/todo-advanced-directive/src/index.html",
             "main": "projects/todo-advanced-directive/src/main.ts",
@@ -145,7 +149,13 @@
             "styles": [
               "projects/todo-advanced-directive/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -251,7 +261,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-advanced-errorhandling",
             "index": "projects/todo-advanced-errorhandling/src/index.html",
             "main": "projects/todo-advanced-errorhandling/src/main.ts",
@@ -264,7 +273,13 @@
             "styles": [
               "projects/todo-advanced-errorhandling/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -370,7 +385,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-advanced-forms-reactive",
             "index": "projects/todo-advanced-forms-reactive/src/index.html",
             "main": "projects/todo-advanced-forms-reactive/src/main.ts",
@@ -383,7 +397,13 @@
             "styles": [
               "projects/todo-advanced-forms-reactive/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -489,7 +509,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-advanced-forms-template",
             "index": "projects/todo-advanced-forms-template/src/index.html",
             "main": "projects/todo-advanced-forms-template/src/main.ts",
@@ -502,7 +521,13 @@
             "styles": [
               "projects/todo-advanced-forms-template/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -608,7 +633,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-advanced-generic-service",
             "index": "projects/todo-advanced-generic-service/src/index.html",
             "main": "projects/todo-advanced-generic-service/src/main.ts",
@@ -621,7 +645,13 @@
             "styles": [
               "projects/todo-advanced-generic-service/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -727,7 +757,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-advanced-pipe",
             "index": "projects/todo-advanced-pipe/src/index.html",
             "main": "projects/todo-advanced-pipe/src/main.ts",
@@ -740,7 +769,13 @@
             "styles": [
               "projects/todo-advanced-pipe/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -846,7 +881,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-advanced-routing",
             "index": "projects/todo-advanced-routing/src/index.html",
             "main": "projects/todo-advanced-routing/src/main.ts",
@@ -859,7 +893,13 @@
             "styles": [
               "projects/todo-advanced-routing/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -965,7 +1005,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-advanced-templating",
             "index": "projects/todo-advanced-templating/src/index.html",
             "main": "projects/todo-advanced-templating/src/main.ts",
@@ -978,7 +1017,13 @@
             "styles": [
               "projects/todo-advanced-templating/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -1084,7 +1129,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-advanced-translate",
             "index": "projects/todo-advanced-translate/src/index.html",
             "main": "projects/todo-advanced-translate/src/main.ts",
@@ -1097,7 +1141,13 @@
             "styles": [
               "projects/todo-advanced-translate/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -1203,7 +1253,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-aot",
             "index": "projects/todo-aot/src/index.html",
             "main": "projects/todo-aot/src/main.ts",
@@ -1216,7 +1265,13 @@
             "styles": [
               "projects/todo-aot/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -1322,7 +1377,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-flux",
             "index": "projects/todo-flux/src/index.html",
             "main": "projects/todo-flux/src/main.ts",
@@ -1335,7 +1389,13 @@
             "styles": [
               "projects/todo-flux/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -1441,7 +1501,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-mvc",
             "index": "projects/todo-mvc/src/index.html",
             "main": "projects/todo-mvc/src/main.ts",
@@ -1454,7 +1513,13 @@
             "styles": [
               "projects/todo-mvc/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -1560,7 +1625,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-mvc-s",
             "index": "projects/todo-mvc-s/src/index.html",
             "main": "projects/todo-mvc-s/src/main.ts",
@@ -1573,7 +1637,13 @@
             "styles": [
               "projects/todo-mvc-s/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -1679,7 +1749,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-pwa",
             "index": "projects/todo-pwa/src/index.html",
             "main": "projects/todo-pwa/src/main.ts",
@@ -1693,7 +1762,13 @@
             "styles": [
               "projects/todo-pwa/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -1709,7 +1784,6 @@
                   "with": "projects/todo-pwa/src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": false,
               "outputHashing": "all",
               "sourceMap": false,
               "namedChunks": false,
@@ -1802,7 +1876,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-onpush",
             "index": "projects/todo-onpush/src/index.html",
             "main": "projects/todo-onpush/src/main.ts",
@@ -1815,7 +1888,13 @@
             "styles": [
               "projects/todo-onpush/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -1921,7 +2000,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-redux",
             "index": "projects/todo-redux/src/index.html",
             "main": "projects/todo-redux/src/main.ts",
@@ -1934,7 +2012,13 @@
             "styles": [
               "projects/todo-redux/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -2040,7 +2124,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-rxjs-redux",
             "index": "projects/todo-rxjs-redux/src/index.html",
             "main": "projects/todo-rxjs-redux/src/main.ts",
@@ -2053,7 +2136,13 @@
             "styles": [
               "projects/todo-rxjs-redux/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -2159,7 +2248,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "dist/todo-testing",
             "index": "projects/todo-testing/src/index.html",
             "main": "projects/todo-testing/src/main.ts",
@@ -2172,7 +2260,13 @@
             "styles": [
               "projects/todo-testing/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
