@@ -1,182 +1,23 @@
-/*
-  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
-  It is not intended to be used to perform a compilation.
-
-  To learn more about this file see: https://angular.io/config/solution-tsconfig.
-*/
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./projects/todo-single-component/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-single-component/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-single-component-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-advanced-directive/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-advanced-directive/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-advanced-directive-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-advanced-errorhandling/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-advanced-errorhandling/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-advanced-errorhandling-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-advanced-forms-reactive/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-advanced-forms-reactive/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-advanced-forms-reactive-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-advanced-forms-template/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-advanced-forms-template/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-advanced-forms-template-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-advanced-generic-service/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-advanced-generic-service/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-advanced-generic-service-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-advanced-pipe/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-advanced-pipe/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-advanced-pipe-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-advanced-routing/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-advanced-routing/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-advanced-routing-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-advanced-templating/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-advanced-templating/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-advanced-templating-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-advanced-translate/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-advanced-translate/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-advanced-translate-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-aot/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-aot/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-aot-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-flux/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-flux/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-flux-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-mvc/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-mvc/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-mvc-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-mvc-s/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-mvc-s/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-mvc-s-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-pwa/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-pwa/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-pwa-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-onpush/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-onpush/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-onpush-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-redux/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-redux/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-redux-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-rxjs-redux/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-rxjs-redux/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-rxjs-redux-e2e/tsconfig.e2e.json"
-    },
-    {
-      "path": "./projects/todo-testing/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/todo-testing/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/todo-testing-e2e/tsconfig.e2e.json"
-    }
-  ]
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "downlevelIteration": true,
+    "importHelpers": true,
+    "module": "es2020",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ]
+  }
 }

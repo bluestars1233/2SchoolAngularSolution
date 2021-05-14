@@ -1,5 +1,5 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { async, inject, TestBed } from '@angular/core/testing';
+import { inject, TestBed, waitForAsync } from '@angular/core/testing';
 import { TodoItem } from '../../shared';
 import { TodoService } from './todo.service';
 
@@ -13,7 +13,7 @@ const todoDataResult = [
 ////////  Tests  /////////////
 describe('Http-TodoService (mockBackend)', () => {
 
-    beforeEach(async(() => {
+    beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
             imports: [HttpClientTestingModule],
             providers: [
