@@ -7,8 +7,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class ConfirmDialogComponent {
 
-    public title: string;
-    public message: string;
+    public title: string | undefined;
+    public message: string | undefined;
 
     constructor(public dialogRef: MatDialogRef<ConfirmDialogComponent>) {
 

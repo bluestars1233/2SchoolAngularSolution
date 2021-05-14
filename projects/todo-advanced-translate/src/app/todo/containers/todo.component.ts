@@ -10,8 +10,8 @@ import { TodoService } from '../services/todo.service';
 export class TodoComponent implements OnInit, OnDestroy {
     public param: any;
 
-    public todos: TodoItem[];
-    private orig: TodoItem[];
+    public todos: TodoItem[] | undefined;
+    private orig: TodoItem[] | undefined;
 
     constructor(private todoService: TodoService, private snackBar: MatSnackBar) {
         this.param = { value: 'Fritz' };
@@ -31,12 +31,12 @@ export class TodoComponent implements OnInit, OnDestroy {
 
     public onAdd(newItem: TodoItem): void {
         newItem.lastModified = new Date();
-        this.todos.push(newItem);
-        this.snackBar.open('add item', null, { duration: 1500 });
+        this.todos?.push(newItem);
+        this.snackBar.open('add item', undefined, { duration: 1500 });
     }
 
     public onReset(): void {
-        this.todos = cloneArray(this.orig);
-        this.snackBar.open('reset todos', null, { duration: 1500 });
+        this.todos = this.orig ? cloneArray(this.orig) : this.orig;
+        this.snackBar.open('reset todos', undefined, { duration: 1500 });
     }
 }

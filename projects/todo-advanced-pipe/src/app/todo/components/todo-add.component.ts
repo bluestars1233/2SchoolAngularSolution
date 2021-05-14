@@ -10,7 +10,7 @@ export class TodoAddComponent {
     @Output()
     public add: EventEmitter<TodoItem> = new EventEmitter<TodoItem>();
 
-    @ViewChild('description', { static: true }) private descriptionInput: ElementRef;
+    @ViewChild('description', { static: true }) private descriptionInput: ElementRef | undefined;
 
     constructor(public snackBar: MatSnackBar) {
 
@@ -18,7 +18,11 @@ export class TodoAddComponent {
 
     public onAdd(newItemDescription: string) {
         this.add.emit({ description: newItemDescription, checked: false, lastModified: new Date(), id: 0 });
-        this.descriptionInput.nativeElement.value = '';
-        this.snackBar.open(`Item with description "${newItemDescription} added`, null, { duration: 1500 });
+
+        if( this.descriptionInput) {
+          this.descriptionInput.nativeElement.value = '';
+        }
+
+        this.snackBar.open(`Item with description "${newItemDescription} added`, undefined, { duration: 1500 });
     }
 }

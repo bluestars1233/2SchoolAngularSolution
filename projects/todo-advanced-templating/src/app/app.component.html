@@ -14,7 +14,7 @@
         <!-- This is required since side-nave in mode over is per default focusing first focusable element, which is a behavior we don't want -->
         <a mat-list-item style="height: 0px" routerLink="home"></a>
         <a *ngFor="let navItem of navItems" mat-list-item [routerLink]="[navItem.path]" (click)="sidenav.close()" routerLinkActive="mat-list-item-focus">
-          {{navItem.data.title}}
+          {{navItem.data?.title}}
         </a>
       </mat-nav-list>
       <div fxLayoutAlign="center end" fxFlex="nogrow" class="bottom">

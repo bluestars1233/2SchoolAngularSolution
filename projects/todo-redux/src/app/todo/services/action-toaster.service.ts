@@ -6,15 +6,13 @@ import { Subscription } from 'rxjs';
 
 @Injectable()
 export class ActionToasterService {
-    private snackbarRef: MatSnackBarRef<SimpleSnackBar>;
-
-    constructor(private snackBar: MatSnackBar, private actions$: Actions) {
+        constructor(private snackBar: MatSnackBar, private actions$: Actions) {
 
     }
 
     public start(): Subscription {
         return this.actions$.subscribe((action: Action) => {
-            this.snackBar.open(`Action with ${action.type} executed`, null, { duration: 1500 });
+            this.snackBar.open(`Action with ${action.type} executed`, undefined, { duration: 1500 });
         });
     }
 }

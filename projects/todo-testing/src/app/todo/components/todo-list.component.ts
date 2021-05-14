@@ -9,11 +9,11 @@ import { TodoItem } from '../../shared';
 })
 export class TodoListComponent {
     @Input()
-    public items: TodoItem[];
+    public items: TodoItem[] | undefined;
     @Input()
-    public hasReset: boolean;
+    public hasReset: boolean | undefined;
     @Input()
-    public title: string;
+    public title: string | undefined;
     @Output()
     public reset = new EventEmitter<void>();
 
@@ -24,6 +24,6 @@ export class TodoListComponent {
     public onChecked(checked: boolean, item: TodoItem) {
         item.checked = checked;
         item.lastModified = new Date();
-        this.snackBar.open('checked / unchecked item', null, { duration: 1500 });
+        this.snackBar.open('checked / unchecked item', undefined, { duration: 1500 });
     }
 }

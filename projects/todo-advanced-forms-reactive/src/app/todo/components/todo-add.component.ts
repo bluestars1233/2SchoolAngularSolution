@@ -10,9 +10,9 @@ import { TodoItem } from '../../shared';
 export class TodoAddComponent implements OnInit {
     @Output()
     public add: EventEmitter<TodoItem> = new EventEmitter<TodoItem>();
-    public todoForm: FormGroup;
+    public todoForm: FormGroup | undefined;
 
-    @ViewChild('addForm', { read: FormGroupDirective, static: true }) private form: FormGroupDirective;
+    @ViewChild('addForm', { read: FormGroupDirective, static: true }) private form: FormGroupDirective | undefined;
 
     constructor(public snackBar: MatSnackBar) {
 
@@ -26,21 +26,25 @@ export class TodoAddComponent implements OnInit {
 
     public onAdd(newItemDescription: string) {
         this.add.emit({ description: newItemDescription as string, checked: false, lastModified: new Date(), id: 0 });
-        this.snackBar.open(`Item with description "${newItemDescription} added`, null, { duration: 1500 });
+        this.snackBar.open(`Item with description "${newItemDescription} added`, undefined, { duration: 1500 });
         this.revert();
     }
 
-    public get descriptionControl(): AbstractControl {
-        return this.todoForm.get('description');
+    public get descriptionControl(): AbstractControl | null | undefined {
+      return this.todoForm?.get('description');
     }
 
     public revert() {
-        this.form.resetForm();
+        this.form?.resetForm();
     }
 
     public get errorMessage() {
+      if(this.descriptionControl) {
         return this.descriptionControl.hasError('required') ? 'Description is required.' :
-            this.descriptionControl.hasError('minlength') ? 'Description must be at least 3 characters long.' :
-                '';
+        this.descriptionControl.hasError('minlength') ? 'Description must be at least 3 characters long.' :
+            '';
+      }
+
+      return '';
     }
 }

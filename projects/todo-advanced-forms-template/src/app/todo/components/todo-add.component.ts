@@ -12,9 +12,9 @@ export class TodoAddComponent {
     public add: EventEmitter<TodoItem> = new EventEmitter<TodoItem>();
 
     // required for AoT build
-    public descriptionText: string;
+    public descriptionText: string = '';
 
-    @ViewChild('myForm', { static: true }) form: NgForm;
+    @ViewChild('myForm', { static: true }) form: NgForm | undefined;
 
     constructor(public snackBar: MatSnackBar) {
 
@@ -22,7 +22,7 @@ export class TodoAddComponent {
 
     public onAdd() {
         this.add.emit({ description: this.descriptionText, checked: false, lastModified: new Date(), id: 0 });
-        this.form.resetForm();
-        this.snackBar.open(`Item with description "${this.descriptionText} added`, null, { duration: 1500 });
+        this.form?.resetForm();
+        this.snackBar.open(`Item with description "${this.descriptionText} added`, undefined, { duration: 1500 });
     }
 }

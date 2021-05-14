@@ -13,7 +13,7 @@ export class ActionToasterService {
         return this.dispatcher.subscribe((action: Action) => {
             // Timeout is required because of the bad implementation within current material beta.
             // With this it is ensure previous cycle is already executed
-            setTimeout(() => this.snackBar.open(action.name, null, { duration: 1500 }));
+            setTimeout(() => this.snackBar.open(action.name, undefined, { duration: 1500 }));
         });
     }
 }

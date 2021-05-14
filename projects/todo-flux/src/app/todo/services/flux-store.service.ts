@@ -8,8 +8,8 @@ import { fluxDispatcherToken } from './flux.configuration';
 
 @Injectable()
 export class FluxStore {
-    public todos: TodoItem[];
-    private orig: TodoItem[];
+    public todos: TodoItem[] | undefined;
+    private orig: TodoItem[] | undefined;
 
     constructor(
         private http: HttpClient,
@@ -17,20 +17,20 @@ export class FluxStore {
         @Inject(fluxDispatcherToken) private dispatcher: Subject<FluxAction>
     ) {
         this.dispatcher.subscribe((action: FluxAction) => {
-            let item: TodoItem;
+            let item: TodoItem = {} as TodoItem;
             if (action.id) {
-                item = this.todos.filter((arrayItem) => arrayItem.id === action.id)[0];
+                item = this.todos?.filter((arrayItem) => arrayItem.id === action.id)[0] as TodoItem;
             }
-            let actionText: string;
+            let actionText: string = '';
 
             switch (action.type) {
                 case FluxActionTypes.Load:
                     this.load();
                     break;
                 case FluxActionTypes.Add:
-                    this.todos.push({
+                    this.todos?.push({
                         id: Math.max.apply(Math, (this.todos.map((arrayItem) => arrayItem.id))) + 1,
-                        description: action.description,
+                        description: action.description ?? '',
                         checked: false,
                         lastModified: new Date()
                     });
@@ -46,7 +46,7 @@ export class FluxStore {
                     actionText = 'item unchecked';
                     break;
                 case FluxActionTypes.Reset:
-                    this.todos = cloneArray(this.orig);
+                    this.todos = this.orig ? cloneArray(this.orig) : this.orig;
                     actionText = 'items reset';
                     break;
                 default:
@@ -54,7 +54,7 @@ export class FluxStore {
             }
 
             if (action.type !== FluxActionTypes.Load) { // In this case toast already sent!
-                this.snackBar.open(actionText, null, { duration: 1500 });
+                this.snackBar.open(actionText, undefined, { duration: 1500 });
             }
         });
     }
@@ -64,7 +64,7 @@ export class FluxStore {
             .subscribe((result) => {
                 this.todos = cloneArray(result);
                 this.orig = result;
-                this.snackBar.open('todos loaded', null, { duration: 1500 });
+                this.snackBar.open('todos loaded', undefined, { duration: 1500 });
             });
     }
 }
