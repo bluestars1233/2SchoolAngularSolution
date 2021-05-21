@@ -18,7 +18,7 @@ export class TodoAddComponent {
   public add: EventEmitter<TodoItem> = new EventEmitter<TodoItem>();
 
   @ViewChild('description', { static: true })
-  private descriptionInput: ElementRef;
+  private descriptionInput: ElementRef | undefined;
 
   constructor() {}
 
@@ -29,6 +29,9 @@ export class TodoAddComponent {
       lastModified: new Date(),
       id: 0
     });
-    this.descriptionInput.nativeElement.value = '';
+
+    if(this.descriptionInput) {
+      this.descriptionInput.nativeElement.value = '';
+    }
   }
 }

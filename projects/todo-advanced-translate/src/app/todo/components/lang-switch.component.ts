@@ -13,7 +13,7 @@ export class LangSwitchComponent {
         translate.setDefaultLang(this.myLang);
     }
 
-    public onLangChanged(event) {
+    public onLangChanged(event: any) {
         console.log('lang changed ' + event.value);
         this.translate.use(event.value);
     }

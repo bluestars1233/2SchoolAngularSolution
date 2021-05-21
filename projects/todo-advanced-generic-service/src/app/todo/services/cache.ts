@@ -9,8 +9,13 @@ export class Cache<T> {
         return true;
     }
 
-    public readCache(): T {
-        return JSON.parse(localStorage.getItem(this.key));
+    public readCache(): T | undefined {
+        const cached = localStorage.getItem(this.key);
+        if(cached) {
+          return JSON.parse(cached);
+        }
+
+        return undefined;
     }
 
     public hasCache(): boolean {

@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnDestroy, OnInit } from '@angular/core';
-import { Observable, ReplaySubject, Subject } from 'rxjs';
+import { Observable, ReplaySubject } from 'rxjs';
 import { take } from 'rxjs/operators';
+import { PlaygroundState } from '../../app-state.model';
 import { Disposer } from '../../disposer.service';
-import { Action } from '../state-machine/action.type';
-import { dispatcherToken, stateToken } from '../state-machine/state.configuration';
+import { stateToken } from '../state-machine/state.configuration';
 import { AppState } from './../state.type';
 
 @Component({
@@ -15,12 +15,11 @@ export class StatePlaybackComponent implements OnInit, OnDestroy {
     public stateIndex = 0;
     private maxState = 0;
 
-    constructor(@Inject(stateToken) private state: ReplaySubject<AppState>, @Inject(dispatcherToken) private dispatcher: Subject<Action>,
-        private disposer: Disposer, private cd: ChangeDetectorRef) {
+    constructor(@Inject(stateToken) private state: ReplaySubject<PlaygroundState>, private disposer: Disposer, private cd: ChangeDetectorRef) {
 
     }
 
-    public get currentState(): Observable<AppState> {
+    public get currentState(): Observable<PlaygroundState> {
         console.log(`state at index ${this.stateIndex} loaded`);
         if (this.stateIndex !== this.maxState) {
             return this.state.pipe(take(this.stateIndex));

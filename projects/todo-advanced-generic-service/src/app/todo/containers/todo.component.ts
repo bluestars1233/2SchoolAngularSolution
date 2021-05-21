@@ -12,7 +12,7 @@ export class TodoComponent implements OnInit {
 
     }
 
-    public get todos(): TodoItem[] {
+    public get todos(): TodoItem[] | undefined {
         return this.todoService.items;
     }
 

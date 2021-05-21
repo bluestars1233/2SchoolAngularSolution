@@ -25,7 +25,7 @@ import { TodoService } from './todo.service';
   providedIn: 'root'
 })
 export class PushService {
-  private lastNotifcation: NotificationOptions;
+  private lastNotifcation: NotificationOptions | undefined;
 
   constructor(private swPush: SwPush, private todoService: TodoService) {
     // Acquire push subscription and afterwards react onto pushes
@@ -42,7 +42,7 @@ export class PushService {
     });
 
     this.swPush.notificationClicks.subscribe(() => {
-      const payload: TodoItem = this.lastNotifcation.data;
+      const payload: TodoItem = this.lastNotifcation?.data;
 
       if (payload) {
         const item = this.todoService.todos.find(

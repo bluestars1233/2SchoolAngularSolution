@@ -4,5 +4,5 @@
 
     <todo-state-playback #playback></todo-state-playback>
     <todo-add (add)="onAdd($event)"></todo-add>
-    <todo-view [items]="(playback.currentState | async).todosContext?.todosEdit" (reset)="onReset()"></todo-view>
+    <todo-view [items]="(playback.currentState | async)?.todosContext?.todosEdit" (reset)="onReset()"></todo-view>
 </div>

@@ -40,20 +40,30 @@ function handleCheck(
   checked: boolean
 ): TodoItem[] {
   const origItem = state.todosEdit.find(item => item.id === id);
-  const toEdit = { ...origItem };
-  toEdit.checked = checked;
-  const clone = [...state.todosEdit.filter(item => item.id !== id)];
-  clone.splice(state.todosEdit.indexOf(origItem), 0, toEdit);
-  return clone;
+
+  if(origItem) {
+    const toEdit = { ...origItem };
+    toEdit.checked = checked;
+    const clone = [...state.todosEdit.filter(item => item.id !== id)];
+    clone.splice(state.todosEdit.indexOf(origItem), 0, toEdit);
+    return clone;
+  }
+
+  return state.todosEdit;
 }
 
 function handleModified(state: TodoState, id: number): TodoItem[] {
   const origItem = state.todosEdit.find(item => item.id === id);
-  const toEdit = { ...origItem };
-  toEdit.lastModified = new Date();
-  const clone = [...state.todosEdit.filter(item => item.id !== id)];
-  clone.splice(state.todosEdit.indexOf(origItem), 0, toEdit);
-  return clone;
+
+  if(origItem) {
+    const toEdit = { ...origItem };
+    toEdit.lastModified = new Date();
+    const clone = [...state.todosEdit.filter(item => item.id !== id)];
+    clone.splice(state.todosEdit.indexOf(origItem), 0, toEdit);
+    return clone;
+  }
+
+  return state.todosEdit;
 }
 
 export function todoReducer(state: TodoState | undefined, action: Action) {

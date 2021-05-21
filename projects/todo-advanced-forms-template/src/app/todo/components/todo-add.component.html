@@ -8,10 +8,10 @@
                 #descriptionModel="ngModel">
 
             <mat-error *ngIf="descriptionModel.invalid && (descriptionModel.dirty || descriptionModel.touched)" class="alert alert-danger">
-                <div *ngIf="descriptionModel.errors.required">
+                <div *ngIf="descriptionModel.errors?.required">
                     Description is required.
                 </div>
-                <div *ngIf="descriptionModel.errors.minlength">
+                <div *ngIf="descriptionModel.errors?.minlength">
                     Description must be at least 3 characters long.
                 </div>
             </mat-error>

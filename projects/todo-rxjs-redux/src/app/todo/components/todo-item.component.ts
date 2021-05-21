@@ -8,7 +8,7 @@ import { TodoItem } from '../../shared';
 })
 export class TodoItemComponent {
     @Input()
-    public item: TodoItem;
+    public item: TodoItem | undefined;
     @Output()
     public checked: EventEmitter<boolean> = new EventEmitter<boolean>();
 

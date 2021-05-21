@@ -5,8 +5,8 @@ import { cloneArray, TodoItem } from '../../shared';
 
 @Injectable()
 export class TodoService {
-    public todos: TodoItem[];
-    private orig: TodoItem[];
+    public todos: TodoItem[] = [];
+    private orig: TodoItem[] = [];
 
     constructor(private http: HttpClient) {
 

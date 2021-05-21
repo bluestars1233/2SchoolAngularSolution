@@ -1,7 +1,7 @@
 import { merge } from './helpers.util';
 
 class ObjectPathCopyService {
-    public deepCopyByObjectPath<TObj>(orig: TObj, selector: (orig: TObj) => any, props?: {}): TObj {
+    public deepCopyByObjectPath<TObj>(orig: TObj, selector: (orig: TObj) => any, props = {}): TObj {
         const paths = this.extractPath(selector).split('.');
 
         if (paths.length === 1) {

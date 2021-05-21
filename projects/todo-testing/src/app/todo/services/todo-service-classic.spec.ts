@@ -14,7 +14,7 @@ describe('Http-HeroService (mockBackend)', () => {
     it('load heroes from fake', () => {
         // Arrange
         const fakeHttp = { get: () => { } } as any;
-        let observerFake: Observer<TodoItem[]>;
+        let observerFake: Observer<TodoItem[]> | undefined;
         const obs = new Observable((observer) => {
             observerFake = observer;
         });
@@ -24,12 +24,12 @@ describe('Http-HeroService (mockBackend)', () => {
         const sut = new TodoService(fakeHttp);
 
         // Action
-        let result;
+        let result: TodoItem[] = [];
         sut.load().subscribe((resultFromService) => {
             result = resultFromService;
         });
-        observerFake.next(items);
-        observerFake.complete();
+        observerFake?.next(items);
+        observerFake?.complete();
 
         // Assert
         expect(fakeHttp.get).toHaveBeenCalled();

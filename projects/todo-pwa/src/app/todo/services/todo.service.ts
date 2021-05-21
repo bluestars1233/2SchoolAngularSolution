@@ -7,8 +7,8 @@ import { cloneArray, TodoItem } from '../../shared';
   providedIn: 'root'
 })
 export class TodoService {
-    public todos: TodoItem[];
-    private orig: TodoItem[];
+    public todos: TodoItem[] = [];
+    private orig: TodoItem[] = [];
 
     constructor(private http: HttpClient) {
 

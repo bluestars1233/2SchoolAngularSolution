@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';
@@ -7,21 +7,17 @@ import { TodoItem } from '../../shared';
     selector: 'todo-add',
     templateUrl: './todo-add.component.html'
 })
-export class TodoAddComponent implements OnInit {
+export class TodoAddComponent {
     @Output()
     public add: EventEmitter<TodoItem> = new EventEmitter<TodoItem>();
-    public todoForm: FormGroup | undefined;
+    public todoForm = new FormGroup({
+      description: new FormControl('', [Validators.required, Validators.minLength(3)])
+  });
 
     @ViewChild('addForm', { read: FormGroupDirective, static: true }) private form: FormGroupDirective | undefined;
 
     constructor(public snackBar: MatSnackBar) {
 
-    }
-
-    public ngOnInit(): void {
-        this.todoForm = new FormGroup({
-            description: new FormControl('', [Validators.required, Validators.minLength(3)])
-        });
     }
 
     public onAdd(newItemDescription: string) {

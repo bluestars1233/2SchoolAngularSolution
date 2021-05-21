@@ -5,9 +5,9 @@ import { cloneArray, TodoItem } from '../../shared';
 
 @Injectable()
 export class TodoService {
-    public todos: TodoItem[];
+    public todos: TodoItem[] = [];
     private readonly url = 'assets/mock-data/todos.json';
-    private orig: TodoItem[];
+    private orig: TodoItem[] = [];
 
     constructor(private http: HttpClient) {
 

@@ -8,11 +8,11 @@ import { TodoItem } from '../models/todo.types';
 })
 export class TodoListComponent {
   @Input()
-  public items: TodoItem[];
+  public items: TodoItem[] | undefined;
   @Input()
-  public hasReset: boolean;
+  public hasReset: boolean | undefined;
   @Input()
-  public title: string;
+  public title: string | undefined;
   @Output()
   public reset = new EventEmitter<void>();
   @Output()

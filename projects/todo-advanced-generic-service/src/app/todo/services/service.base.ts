@@ -5,9 +5,9 @@ import { Cache } from './cache';
 
 
 export abstract class ServiceBase<TItem> {
-    public items: TItem[];
+    public items: TItem[] | undefined;
     protected cache: Cache<TItem[]>;
-    private orig: TItem[];
+    private orig: TItem[] | undefined;
 
     constructor(protected http: HttpClient, protected cacheKey: string) {
         this.cache = new Cache<TItem[]>(cacheKey);
@@ -38,18 +38,22 @@ export abstract class ServiceBase<TItem> {
     }
 
     public add(newItem: TItem): void {
-        this.items.push(newItem);
+        this.items?.push(newItem);
 
         this.persist();
     }
 
     public reset(): void {
+      if(this.orig) {
         this.items = cloneArray(this.orig);
         this.persist();
+      }
     }
 
     public persist(): void {
+      if(this.items) {
         this.cache.writeCache(this.items);
+      }
     }
 
     protected abstract getServiceUrl(): string;

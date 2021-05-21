@@ -6,7 +6,7 @@ import { Action } from './action.type';
 
 
 export let wrapIntoBehavior = (init: AppState, obs: Observable<AppState>): ReplaySubject<AppState> => {
-    const res = new ReplaySubject();
+    const res = new ReplaySubject<AppState>();
     res.next(init);
     obs.subscribe((s) => res.next(s));
     return res;

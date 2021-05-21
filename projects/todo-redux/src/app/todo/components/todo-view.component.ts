@@ -7,9 +7,11 @@ import { TodoItem } from '../models/todo.types';
 })
 export class TodoViewComponent {
   @Input()
-  public items: TodoItem[] | undefined;
+  public items: TodoItem[] | null | undefined;
   @Output()
   public reset = new EventEmitter<void>();
+  @Output()
+  public checked = new EventEmitter<{ checked: boolean; id: number }>();
 
   public get itemsOpen(): TodoItem[] | undefined {
       return this.filterCheckedBy(false);

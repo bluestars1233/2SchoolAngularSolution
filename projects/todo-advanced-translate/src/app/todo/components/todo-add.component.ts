@@ -23,6 +23,6 @@ export class TodoAddComponent {
           this.descriptionInput.nativeElement.value = '';
         }
 
-        this.snackBar.open(`Item with description "${newItemDescription} added`, null, { duration: 1500 });
+        this.snackBar.open(`Item with description "${newItemDescription} added`, undefined, { duration: 1500 });
     }
 }

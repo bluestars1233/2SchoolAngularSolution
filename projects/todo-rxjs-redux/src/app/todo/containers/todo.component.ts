@@ -29,8 +29,8 @@ export class TodoComponent implements OnInit, OnDestroy {
         // register an epic which is execute always after a (or several) specific action(s) are executed
         this.disposer.safeSubscribe(this.dispatcher.pipe(
             filter((action) => action instanceof CheckTodoAction))
-            .subscribe((action: CheckTodoAction) => {
-                this.dispatcher.next(new ModifiedTodoAction(action.id));
+            .subscribe((action: Action) => {
+                this.dispatcher.next(new ModifiedTodoAction((action as CheckTodoAction).id));
             }), this.actionToasterService.start());
     }
 

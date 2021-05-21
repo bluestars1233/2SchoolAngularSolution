@@ -7,7 +7,7 @@ import { tap, debounceTime } from 'rxjs/operators';
   templateUrl: './todo-filter.component.html',
 })
 export class TodoFilterComponent {
-  public filter: string;
+  public filter: string | undefined;
 
   @Output()
   public filterChanged = new EventEmitter<string>();

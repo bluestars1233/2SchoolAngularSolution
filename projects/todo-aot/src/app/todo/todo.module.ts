@@ -39,7 +39,7 @@ export let todoAotService: TodoAotService = new TodoAotService();
     providers: [{ provide: TodoAotService, useValue: new TodoAotService() },
     {
         provide: TodoService,
-        useFactory: (http) => new TodoService(http),
+        useFactory: (http: HttpClient) => new TodoService(http),
         deps: [HttpClient]
     }]
 })
