@@ -9,7 +9,7 @@ export class TodoViewComponent {
   @Input()
   public items: TodoItem[] | undefined;
   @Output()
-  public reset = new EventEmitter<void>();
+  public resetItem = new EventEmitter<void>();
 
   public get itemsOpen(): TodoItem[] | undefined {
       return this.filterCheckedBy(false);

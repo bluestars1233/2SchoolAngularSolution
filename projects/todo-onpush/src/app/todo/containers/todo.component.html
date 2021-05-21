@@ -13,10 +13,10 @@
     </div>
 
     <h1>ChangeDetectionStrategy.Default</h1>
-    <todo-view [items]="todos" (reset)="onReset()">
+    <todo-view [items]="todos" (resetItem)="onReset()">
     </todo-view>
 
     <h1>ChangeDetectionStrategy.OnPush</h1>
-    <todo-immutable-view [items]="todos" (reset)="onReset()">
+    <todo-immutable-view [items]="todos" (resetItem)="onReset()">
     </todo-immutable-view>
 </div>

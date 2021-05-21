@@ -11,8 +11,7 @@
       "parserOptions": {
         "project": [
           "projects/todo-onpush//tsconfig.app.json",
-          "projects/todo-onpush//tsconfig.spec.json",
-          "projects/todo-onpush//e2e/tsconfig.json"
+          "projects/todo-onpush//tsconfig.spec.json"
         ],
         "createDefaultProgram": true
       },
@@ -21,7 +20,6 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "app",
             "style": "camelCase"
           }
         ],
@@ -29,7 +27,6 @@
           "error",
           {
             "type": "element",
-            "prefix": "app",
             "style": "kebab-case"
           }
         ]

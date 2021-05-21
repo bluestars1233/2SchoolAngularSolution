@@ -6,5 +6,5 @@
 
     <todo-filter (filterChanged)="filter=$event"></todo-filter>
 
-    <todo-view [items]="todos | myTodoFilter:filter" (reset)="onReset()"></todo-view>
+    <todo-view [items]="todos | myTodoFilter:filter" (resetItem)="onReset()"></todo-view>
 </div>

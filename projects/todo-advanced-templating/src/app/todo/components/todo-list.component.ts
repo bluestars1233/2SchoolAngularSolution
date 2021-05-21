@@ -15,7 +15,7 @@ export class TodoListComponent implements AfterViewInit {
     @Input()
     public title: string | undefined;
     @Output()
-    public reset = new EventEmitter<void>();
+    public resetItem = new EventEmitter<void>();
 
     @ViewChildren(TodoItemComponent, { read: ElementRef }) private todoItems: QueryList<ElementRef> | undefined;
 

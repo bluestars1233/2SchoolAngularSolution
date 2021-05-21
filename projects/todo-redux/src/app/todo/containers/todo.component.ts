@@ -1,7 +1,6 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  OnDestroy,
   OnInit
 } from '@angular/core';
 import { Store, select } from '@ngrx/store';
@@ -17,7 +16,7 @@ import { getTodos } from '../reducers/todo.selector';
   templateUrl: './todo.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TodoComponent implements OnInit, OnDestroy {
+export class TodoComponent implements OnInit {
   public todos$: Observable<TodoItem[]>;
 
   constructor(
@@ -31,8 +30,6 @@ export class TodoComponent implements OnInit, OnDestroy {
     this.store$.dispatch(TodoActions.load());
     this.actionToaster.start();
   }
-
-  public ngOnDestroy() {}
 
   public onAdd(newItem: TodoItem): void {
     this.store$.dispatch(TodoActions.add({ toAdd: newItem }));

@@ -3,5 +3,5 @@
     <h2>Flux architecture</h2>
 
     <todo-add (add)="onAdd($event)"></todo-add>
-    <todo-view [items]="store.todos" (reset)="onReset()"></todo-view>
+    <todo-view [items]="store.todos" (resetItem)="onReset()"></todo-view>
 </div>
