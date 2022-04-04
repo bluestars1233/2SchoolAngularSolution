@@ -112,15 +112,6 @@
             "protractorConfig": "projects/todo-single-component-e2e/protractor.conf.js",
             "devServerTarget": "todo-single-component:serve"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-single-component-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -232,15 +223,6 @@
           "options": {
             "protractorConfig": "projects/todo-advanced-directive-e2e/protractor.conf.js",
             "devServerTarget": "todo-advanced-directive:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-advanced-directive-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -354,15 +336,6 @@
             "protractorConfig": "projects/todo-advanced-errorhandling-e2e/protractor.conf.js",
             "devServerTarget": "todo-advanced-errorhandling:serve"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-advanced-errorhandling-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -474,15 +447,6 @@
           "options": {
             "protractorConfig": "projects/todo-advanced-forms-reactive-e2e/protractor.conf.js",
             "devServerTarget": "todo-advanced-forms-reactive:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-advanced-forms-reactive-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -596,15 +560,6 @@
             "protractorConfig": "projects/todo-advanced-forms-template-e2e/protractor.conf.js",
             "devServerTarget": "todo-advanced-forms-template:serve"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-advanced-forms-template-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -716,15 +671,6 @@
           "options": {
             "protractorConfig": "projects/todo-advanced-generic-service-e2e/protractor.conf.js",
             "devServerTarget": "todo-advanced-generic-service:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-advanced-generic-service-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -838,15 +784,6 @@
             "protractorConfig": "projects/todo-advanced-pipe-e2e/protractor.conf.js",
             "devServerTarget": "todo-advanced-pipe:serve"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-advanced-pipe-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -958,15 +895,6 @@
           "options": {
             "protractorConfig": "projects/todo-advanced-routing-e2e/protractor.conf.js",
             "devServerTarget": "todo-advanced-routing:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-advanced-routing-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -1080,15 +1008,6 @@
             "protractorConfig": "projects/todo-advanced-templating-e2e/protractor.conf.js",
             "devServerTarget": "todo-advanced-templating:serve"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-advanced-templating-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -1200,15 +1119,6 @@
           "options": {
             "protractorConfig": "projects/todo-advanced-translate-e2e/protractor.conf.js",
             "devServerTarget": "todo-advanced-translate:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-advanced-translate-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -1322,15 +1232,6 @@
             "protractorConfig": "projects/todo-aot-e2e/protractor.conf.js",
             "devServerTarget": "todo-aot:serve"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-aot-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -1442,15 +1343,6 @@
           "options": {
             "protractorConfig": "projects/todo-flux-e2e/protractor.conf.js",
             "devServerTarget": "todo-flux:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-flux-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -1564,15 +1456,6 @@
             "protractorConfig": "projects/todo-mvc-e2e/protractor.conf.js",
             "devServerTarget": "todo-mvc:serve"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-mvc-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -1684,15 +1567,6 @@
           "options": {
             "protractorConfig": "projects/todo-mvc-s-e2e/protractor.conf.js",
             "devServerTarget": "todo-mvc-s:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-mvc-s-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -1809,15 +1683,6 @@
             "protractorConfig": "projects/todo-pwa-e2e/protractor.conf.js",
             "devServerTarget": "todo-mvc-s:serve"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-pwa-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -1929,15 +1794,6 @@
           "options": {
             "protractorConfig": "projects/todo-onpush-e2e/protractor.conf.js",
             "devServerTarget": "todo-onpush:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-onpush-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -2051,15 +1907,6 @@
             "protractorConfig": "projects/todo-redux-e2e/protractor.conf.js",
             "devServerTarget": "todo-redux:serve"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-redux-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -2171,15 +2018,6 @@
           "options": {
             "protractorConfig": "projects/todo-rxjs-redux-e2e/protractor.conf.js",
             "devServerTarget": "todo-rxjs-redux:serve"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-rxjs-redux-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -2297,15 +2135,6 @@
             "production": {
               "devServerTarget": "todo-testing:serve:production"
             }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/todo-testing-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }

@@ -26,8 +26,7 @@ import { todoRoutesModule } from './todo.routes';
     imports: [CommonModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatInputModule, MatSnackBarModule,
         MatCardModule, MatCheckboxModule, MatDialogModule, MatListModule, todoRoutesModule, FlexLayoutModule, HttpClientModule],
     declarations: [TodoAddComponent, TodoComponent, TodoListComponent, TodoViewComponent, TodoItemComponent, ConfirmDialogComponent],
-    providers: [TodoService, ErrorLoggerService, { provide: ErrorHandler, useClass: ErrorHandlerService }, DialogService],
-    entryComponents: [ConfirmDialogComponent]
+    providers: [TodoService, ErrorLoggerService, { provide: ErrorHandler, useClass: ErrorHandlerService }, DialogService]
 })
 export class TodoAdvancedErrorhandlingModule {
 

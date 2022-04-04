@@ -26,10 +26,9 @@ import { todoRoutesModule } from './todo.routes';
 @NgModule({
     imports: [CommonModule, FormsModule, ReactiveFormsModule, MatButtonModule, MatInputModule, MatSnackBarModule, MatListModule,
         MatCardModule, MatCheckboxModule, MatDialogModule, HttpClientModule, FlexLayoutModule, todoRoutesModule],
-    entryComponents: [OpenItemsDialogComponent, IsAdminDialogComponent],
     declarations: [TodoAddComponent, TodoComponent, TodoListComponent, TodoViewComponent,
         TodoItemComponent, OpenItemsDialogComponent, IsAdminDialogComponent],
-    providers: [TodoService, CanActivateTodoService, CanDeactivateTodoService, TodosResolve],
+    providers: [TodoService, CanActivateTodoService, CanDeactivateTodoService, TodosResolve]
 })
 export class TodoAdvancedRoutingModule {
 
