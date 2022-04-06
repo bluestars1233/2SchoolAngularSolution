@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "projects/todo-pwa//cypress/integration",
+  "supportFile": "projects/todo-pwa//cypress/support/index.ts",
+  "videosFolder": "projects/todo-pwa//cypress/videos",
+  "screenshotsFolder": "projects/todo-pwa//cypress/screenshots",
+  "pluginsFile": "projects/todo-pwa//cypress/plugins/index.ts",
+  "fixturesFolder": "projects/todo-pwa//cypress/fixtures",
+  "baseUrl": "http://localhost:4200"
+}

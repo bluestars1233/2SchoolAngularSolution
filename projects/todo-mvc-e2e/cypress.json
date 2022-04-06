@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "projects/todo-mvc-e2e//cypress/integration",
+  "supportFile": "projects/todo-mvc-e2e//cypress/support/index.ts",
+  "videosFolder": "projects/todo-mvc-e2e//cypress/videos",
+  "screenshotsFolder": "projects/todo-mvc-e2e//cypress/screenshots",
+  "pluginsFile": "projects/todo-mvc-e2e//cypress/plugins/index.ts",
+  "fixturesFolder": "projects/todo-mvc-e2e//cypress/fixtures",
+  "baseUrl": "http://localhost:4200"
+}

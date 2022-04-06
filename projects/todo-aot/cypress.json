@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "projects/todo-aot//cypress/integration",
+  "supportFile": "projects/todo-aot//cypress/support/index.ts",
+  "videosFolder": "projects/todo-aot//cypress/videos",
+  "screenshotsFolder": "projects/todo-aot//cypress/screenshots",
+  "pluginsFile": "projects/todo-aot//cypress/plugins/index.ts",
+  "fixturesFolder": "projects/todo-aot//cypress/fixtures",
+  "baseUrl": "http://localhost:4200"
+}

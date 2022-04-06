@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "projects/todo-rxjs-redux//cypress/integration",
+  "supportFile": "projects/todo-rxjs-redux//cypress/support/index.ts",
+  "videosFolder": "projects/todo-rxjs-redux//cypress/videos",
+  "screenshotsFolder": "projects/todo-rxjs-redux//cypress/screenshots",
+  "pluginsFile": "projects/todo-rxjs-redux//cypress/plugins/index.ts",
+  "fixturesFolder": "projects/todo-rxjs-redux//cypress/fixtures",
+  "baseUrl": "http://localhost:4200"
+}

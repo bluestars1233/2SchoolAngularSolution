@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "projects/todo-redux//cypress/integration",
+  "supportFile": "projects/todo-redux//cypress/support/index.ts",
+  "videosFolder": "projects/todo-redux//cypress/videos",
+  "screenshotsFolder": "projects/todo-redux//cypress/screenshots",
+  "pluginsFile": "projects/todo-redux//cypress/plugins/index.ts",
+  "fixturesFolder": "projects/todo-redux//cypress/fixtures",
+  "baseUrl": "http://localhost:4200"
+}

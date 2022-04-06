@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "projects/todo-advanced-generic-service//cypress/integration",
+  "supportFile": "projects/todo-advanced-generic-service//cypress/support/index.ts",
+  "videosFolder": "projects/todo-advanced-generic-service//cypress/videos",
+  "screenshotsFolder": "projects/todo-advanced-generic-service//cypress/screenshots",
+  "pluginsFile": "projects/todo-advanced-generic-service//cypress/plugins/index.ts",
+  "fixturesFolder": "projects/todo-advanced-generic-service//cypress/fixtures",
+  "baseUrl": "http://localhost:4200"
+}

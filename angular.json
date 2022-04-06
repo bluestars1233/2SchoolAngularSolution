@@ -99,6 +99,39 @@
               "projects/todo-single-component//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-single-component:serve",
+            "configFile": "projects/todo-single-component//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-single-component:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-single-component//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-single-component:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-single-component:serve:production"
+            }
+          }
         }
       }
     },
@@ -107,10 +140,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-single-component-e2e/protractor.conf.js",
-            "devServerTarget": "todo-single-component:serve"
+            "devServerTarget": "todo-single-component-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-single-component-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-single-component-e2e:serve",
+            "configFile": "projects/todo-single-component-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-single-component-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-single-component-e2e//cypress.json"
           }
         }
       }
@@ -211,6 +270,39 @@
               "projects/todo-advanced-directive//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-directive:serve",
+            "configFile": "projects/todo-advanced-directive//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-directive:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-directive//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-directive:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-directive:serve:production"
+            }
+          }
         }
       }
     },
@@ -219,10 +311,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-advanced-directive-e2e/protractor.conf.js",
-            "devServerTarget": "todo-advanced-directive:serve"
+            "devServerTarget": "todo-advanced-directive-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-directive-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-directive-e2e:serve",
+            "configFile": "projects/todo-advanced-directive-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-directive-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-directive-e2e//cypress.json"
           }
         }
       }
@@ -323,6 +441,39 @@
               "projects/todo-advanced-errorhandling//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-errorhandling:serve",
+            "configFile": "projects/todo-advanced-errorhandling//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-errorhandling:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-errorhandling//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-errorhandling:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-errorhandling:serve:production"
+            }
+          }
         }
       }
     },
@@ -331,10 +482,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-advanced-errorhandling-e2e/protractor.conf.js",
-            "devServerTarget": "todo-advanced-errorhandling:serve"
+            "devServerTarget": "todo-advanced-errorhandling-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-errorhandling-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-errorhandling-e2e:serve",
+            "configFile": "projects/todo-advanced-errorhandling-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-errorhandling-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-errorhandling-e2e//cypress.json"
           }
         }
       }
@@ -435,6 +612,39 @@
               "projects/todo-advanced-forms-reactive//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-forms-reactive:serve",
+            "configFile": "projects/todo-advanced-forms-reactive//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-forms-reactive:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-forms-reactive//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-forms-reactive:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-forms-reactive:serve:production"
+            }
+          }
         }
       }
     },
@@ -443,10 +653,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-advanced-forms-reactive-e2e/protractor.conf.js",
-            "devServerTarget": "todo-advanced-forms-reactive:serve"
+            "devServerTarget": "todo-advanced-forms-reactive-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-forms-reactive-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-forms-reactive-e2e:serve",
+            "configFile": "projects/todo-advanced-forms-reactive-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-forms-reactive-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-forms-reactive-e2e//cypress.json"
           }
         }
       }
@@ -547,6 +783,39 @@
               "projects/todo-advanced-forms-template//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-forms-template:serve",
+            "configFile": "projects/todo-advanced-forms-template//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-forms-template:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-forms-template//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-forms-template:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-forms-template:serve:production"
+            }
+          }
         }
       }
     },
@@ -555,10 +824,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-advanced-forms-template-e2e/protractor.conf.js",
-            "devServerTarget": "todo-advanced-forms-template:serve"
+            "devServerTarget": "todo-advanced-forms-template-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-forms-template-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-forms-template-e2e:serve",
+            "configFile": "projects/todo-advanced-forms-template-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-forms-template-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-forms-template-e2e//cypress.json"
           }
         }
       }
@@ -659,6 +954,39 @@
               "projects/todo-advanced-generic-service//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-generic-service:serve",
+            "configFile": "projects/todo-advanced-generic-service//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-generic-service:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-generic-service//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-generic-service:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-generic-service:serve:production"
+            }
+          }
         }
       }
     },
@@ -667,10 +995,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-advanced-generic-service-e2e/protractor.conf.js",
-            "devServerTarget": "todo-advanced-generic-service:serve"
+            "devServerTarget": "todo-advanced-generic-service-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-generic-service-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-generic-service-e2e:serve",
+            "configFile": "projects/todo-advanced-generic-service-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-generic-service-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-generic-service-e2e//cypress.json"
           }
         }
       }
@@ -771,6 +1125,39 @@
               "projects/todo-advanced-pipe//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-pipe:serve",
+            "configFile": "projects/todo-advanced-pipe//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-pipe:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-pipe//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-pipe:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-pipe:serve:production"
+            }
+          }
         }
       }
     },
@@ -779,10 +1166,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-advanced-pipe-e2e/protractor.conf.js",
-            "devServerTarget": "todo-advanced-pipe:serve"
+            "devServerTarget": "todo-advanced-pipe-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-pipe-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-pipe-e2e:serve",
+            "configFile": "projects/todo-advanced-pipe-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-pipe-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-pipe-e2e//cypress.json"
           }
         }
       }
@@ -883,6 +1296,39 @@
               "projects/todo-advanced-routing//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-routing:serve",
+            "configFile": "projects/todo-advanced-routing//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-routing:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-routing//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-routing:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-routing:serve:production"
+            }
+          }
         }
       }
     },
@@ -891,10 +1337,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-advanced-routing-e2e/protractor.conf.js",
-            "devServerTarget": "todo-advanced-routing:serve"
+            "devServerTarget": "todo-advanced-routing-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-routing-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-routing-e2e:serve",
+            "configFile": "projects/todo-advanced-routing-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-routing-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-routing-e2e//cypress.json"
           }
         }
       }
@@ -995,6 +1467,39 @@
               "projects/todo-advanced-templating//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-templating:serve",
+            "configFile": "projects/todo-advanced-templating//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-templating:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-templating//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-templating:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-templating:serve:production"
+            }
+          }
         }
       }
     },
@@ -1003,10 +1508,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-advanced-templating-e2e/protractor.conf.js",
-            "devServerTarget": "todo-advanced-templating:serve"
+            "devServerTarget": "todo-advanced-templating-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-templating-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-templating-e2e:serve",
+            "configFile": "projects/todo-advanced-templating-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-templating-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-templating-e2e//cypress.json"
           }
         }
       }
@@ -1107,6 +1638,39 @@
               "projects/todo-advanced-translate//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-translate:serve",
+            "configFile": "projects/todo-advanced-translate//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-translate:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-translate//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-translate:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-translate:serve:production"
+            }
+          }
         }
       }
     },
@@ -1115,10 +1679,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-advanced-translate-e2e/protractor.conf.js",
-            "devServerTarget": "todo-advanced-translate:serve"
+            "devServerTarget": "todo-advanced-translate-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-translate-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-advanced-translate-e2e:serve",
+            "configFile": "projects/todo-advanced-translate-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-advanced-translate-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-advanced-translate-e2e//cypress.json"
           }
         }
       }
@@ -1219,6 +1809,39 @@
               "projects/todo-aot//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-aot:serve",
+            "configFile": "projects/todo-aot//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-aot:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-aot//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-aot:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-aot:serve:production"
+            }
+          }
         }
       }
     },
@@ -1227,10 +1850,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-aot-e2e/protractor.conf.js",
-            "devServerTarget": "todo-aot:serve"
+            "devServerTarget": "todo-aot-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-aot-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-aot-e2e:serve",
+            "configFile": "projects/todo-aot-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-aot-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-aot-e2e//cypress.json"
           }
         }
       }
@@ -1331,6 +1980,39 @@
               "projects/todo-flux//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-flux:serve",
+            "configFile": "projects/todo-flux//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-flux:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-flux//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-flux:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-flux:serve:production"
+            }
+          }
         }
       }
     },
@@ -1339,10 +2021,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-flux-e2e/protractor.conf.js",
-            "devServerTarget": "todo-flux:serve"
+            "devServerTarget": "todo-flux-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-flux-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-flux-e2e:serve",
+            "configFile": "projects/todo-flux-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-flux-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-flux-e2e//cypress.json"
           }
         }
       }
@@ -1443,6 +2151,39 @@
               "projects/todo-mvc//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-mvc:serve",
+            "configFile": "projects/todo-mvc//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-mvc:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-mvc//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-mvc:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-mvc:serve:production"
+            }
+          }
         }
       }
     },
@@ -1451,10 +2192,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-mvc-e2e/protractor.conf.js",
-            "devServerTarget": "todo-mvc:serve"
+            "devServerTarget": "todo-mvc-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-mvc-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-mvc-e2e:serve",
+            "configFile": "projects/todo-mvc-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-mvc-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-mvc-e2e//cypress.json"
           }
         }
       }
@@ -1555,6 +2322,39 @@
               "projects/todo-mvc-s//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-mvc-s:serve",
+            "configFile": "projects/todo-mvc-s//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-mvc-s:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-mvc-s//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-mvc-s:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-mvc-s:serve:production"
+            }
+          }
         }
       }
     },
@@ -1563,10 +2363,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-mvc-s-e2e/protractor.conf.js",
-            "devServerTarget": "todo-mvc-s:serve"
+            "devServerTarget": "todo-mvc-s-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-mvc-s-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-mvc-s-e2e:serve",
+            "configFile": "projects/todo-mvc-s-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-mvc-s-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-mvc-s-e2e//cypress.json"
           }
         }
       }
@@ -1670,6 +2496,39 @@
               "projects/todo-pwa//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-pwa:serve",
+            "configFile": "projects/todo-pwa//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-pwa:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-pwa//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-pwa:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-pwa:serve:production"
+            }
+          }
         }
       }
     },
@@ -1678,10 +2537,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-pwa-e2e/protractor.conf.js",
-            "devServerTarget": "todo-mvc-s:serve"
+            "devServerTarget": "todo-pwa-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-pwa-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-pwa-e2e:serve",
+            "configFile": "projects/todo-pwa-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-pwa-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-pwa-e2e//cypress.json"
           }
         }
       }
@@ -1782,6 +2667,39 @@
               "projects/todo-onpush//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-onpush:serve",
+            "configFile": "projects/todo-onpush//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-onpush:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-onpush//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-onpush:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-onpush:serve:production"
+            }
+          }
         }
       }
     },
@@ -1790,10 +2708,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-onpush-e2e/protractor.conf.js",
-            "devServerTarget": "todo-onpush:serve"
+            "devServerTarget": "todo-onpush-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-onpush-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-onpush-e2e:serve",
+            "configFile": "projects/todo-onpush-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-onpush-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-onpush-e2e//cypress.json"
           }
         }
       }
@@ -1894,6 +2838,39 @@
               "projects/todo-redux//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-redux:serve",
+            "configFile": "projects/todo-redux//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-redux:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-redux//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-redux:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-redux:serve:production"
+            }
+          }
         }
       }
     },
@@ -1902,10 +2879,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-redux-e2e/protractor.conf.js",
-            "devServerTarget": "todo-redux:serve"
+            "devServerTarget": "todo-redux-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-redux-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-redux-e2e:serve",
+            "configFile": "projects/todo-redux-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-redux-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-redux-e2e//cypress.json"
           }
         }
       }
@@ -2006,6 +3009,39 @@
               "projects/todo-rxjs-redux//**/*.html"
             ]
           }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-rxjs-redux:serve",
+            "configFile": "projects/todo-rxjs-redux//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-rxjs-redux:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-rxjs-redux//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-rxjs-redux:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-rxjs-redux:serve:production"
+            }
+          }
         }
       }
     },
@@ -2014,10 +3050,36 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-rxjs-redux-e2e/protractor.conf.js",
-            "devServerTarget": "todo-rxjs-redux:serve"
+            "devServerTarget": "todo-rxjs-redux-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-rxjs-redux-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-rxjs-redux-e2e:serve",
+            "configFile": "projects/todo-rxjs-redux-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-rxjs-redux-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-rxjs-redux-e2e//cypress.json"
           }
         }
       }
@@ -2118,18 +3180,33 @@
               "projects/todo-testing//**/*.html"
             ]
           }
-        }
-      }
-    },
-    "todo-testing-e2e": {
-      "root": "projects/todo-testing-e2e/",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/todo-testing-e2e/protractor.conf.js",
-            "devServerTarget": "todo-testing:serve"
+            "devServerTarget": "todo-testing:serve",
+            "configFile": "projects/todo-testing//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-testing:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-testing//cypress.json"
+          }
+        },
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-testing:serve",
+            "watch": true,
+            "headless": false
           },
           "configurations": {
             "production": {
@@ -2138,10 +3215,54 @@
           }
         }
       }
+    },
+    "todo-testing-e2e": {
+      "root": "projects/todo-testing-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-testing-e2e:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-testing-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "todo-testing-e2e:serve",
+            "configFile": "projects/todo-testing-e2e//cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-testing-e2e:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/todo-testing-e2e//cypress.json"
+          }
+        }
+      }
     }
   },
   "defaultProject": "todo-single-component",
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "cache": {
+      "enabled": true,
+      "path": ".cache",
+      "environment": "all"
+    }
   }
 }

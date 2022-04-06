@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "projects/todo-onpush//cypress/integration",
+  "supportFile": "projects/todo-onpush//cypress/support/index.ts",
+  "videosFolder": "projects/todo-onpush//cypress/videos",
+  "screenshotsFolder": "projects/todo-onpush//cypress/screenshots",
+  "pluginsFile": "projects/todo-onpush//cypress/plugins/index.ts",
+  "fixturesFolder": "projects/todo-onpush//cypress/fixtures",
+  "baseUrl": "http://localhost:4200"
+}

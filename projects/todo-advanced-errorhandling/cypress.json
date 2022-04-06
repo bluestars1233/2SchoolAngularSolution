@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "projects/todo-advanced-errorhandling//cypress/integration",
+  "supportFile": "projects/todo-advanced-errorhandling//cypress/support/index.ts",
+  "videosFolder": "projects/todo-advanced-errorhandling//cypress/videos",
+  "screenshotsFolder": "projects/todo-advanced-errorhandling//cypress/screenshots",
+  "pluginsFile": "projects/todo-advanced-errorhandling//cypress/plugins/index.ts",
+  "fixturesFolder": "projects/todo-advanced-errorhandling//cypress/fixtures",
+  "baseUrl": "http://localhost:4200"
+}

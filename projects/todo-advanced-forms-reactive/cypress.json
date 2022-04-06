@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "projects/todo-advanced-forms-reactive//cypress/integration",
+  "supportFile": "projects/todo-advanced-forms-reactive//cypress/support/index.ts",
+  "videosFolder": "projects/todo-advanced-forms-reactive//cypress/videos",
+  "screenshotsFolder": "projects/todo-advanced-forms-reactive//cypress/screenshots",
+  "pluginsFile": "projects/todo-advanced-forms-reactive//cypress/plugins/index.ts",
+  "fixturesFolder": "projects/todo-advanced-forms-reactive//cypress/fixtures",
+  "baseUrl": "http://localhost:4200"
+}

@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "projects/todo-advanced-routing//cypress/integration",
+  "supportFile": "projects/todo-advanced-routing//cypress/support/index.ts",
+  "videosFolder": "projects/todo-advanced-routing//cypress/videos",
+  "screenshotsFolder": "projects/todo-advanced-routing//cypress/screenshots",
+  "pluginsFile": "projects/todo-advanced-routing//cypress/plugins/index.ts",
+  "fixturesFolder": "projects/todo-advanced-routing//cypress/fixtures",
+  "baseUrl": "http://localhost:4200"
+}

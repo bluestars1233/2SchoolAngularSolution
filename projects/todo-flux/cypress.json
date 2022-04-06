@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "projects/todo-flux//cypress/integration",
+  "supportFile": "projects/todo-flux//cypress/support/index.ts",
+  "videosFolder": "projects/todo-flux//cypress/videos",
+  "screenshotsFolder": "projects/todo-flux//cypress/screenshots",
+  "pluginsFile": "projects/todo-flux//cypress/plugins/index.ts",
+  "fixturesFolder": "projects/todo-flux//cypress/fixtures",
+  "baseUrl": "http://localhost:4200"
+}

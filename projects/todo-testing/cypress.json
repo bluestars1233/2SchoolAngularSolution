@@ -1,0 +1,9 @@
+{
+  "integrationFolder": "projects/todo-testing//cypress/integration",
+  "supportFile": "projects/todo-testing//cypress/support/index.ts",
+  "videosFolder": "projects/todo-testing//cypress/videos",
+  "screenshotsFolder": "projects/todo-testing//cypress/screenshots",
+  "pluginsFile": "projects/todo-testing//cypress/plugins/index.ts",
+  "fixturesFolder": "projects/todo-testing//cypress/fixtures",
+  "baseUrl": "http://localhost:4200"
+}
