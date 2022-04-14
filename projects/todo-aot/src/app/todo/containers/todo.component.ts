@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { TodoItem } from '../../shared';
 import { TodoService } from '../services/todo.service';
@@ -7,7 +7,7 @@ import { TodoService } from '../services/todo.service';
     selector: 'todo-page',
     templateUrl: './todo.component.html',
 })
-export class TodoComponent implements OnInit, OnDestroy {
+export class TodoComponent implements OnInit {
     public todos: TodoItem[] | undefined;
     private orig: TodoItem[] | undefined;
 
@@ -21,10 +21,6 @@ export class TodoComponent implements OnInit, OnDestroy {
                 this.orig = result;
                 this.todos = this.cloneArray(result);
             });
-    }
-
-    public ngOnDestroy() {
-
     }
 
     public onAdd(newItem: TodoItem): void {
